@@ -2,15 +2,6 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #000;
     background-color: #f9fafc;
-    margin: 0;
-}
-
-header {
-    margin: 12px;
-}
-
-main {
-    margin: 12px;
 }
 
 a {
@@ -18,17 +9,20 @@ a {
     color: inherit;
 }
 
+.block-link {
+    display: block;
+}
 
-nav ul {
+.header-links {
     list-style: none;
-    color: #69696a;
     margin-block-start: 0;
+    color: #69696a;
     padding: 0px;
     display: flex;
     flex-direction: column;
 }
 
-nav ul li {
+.header-links li {
     font-size: 1em;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -36,7 +30,11 @@ nav ul li {
 
 h1 {
     font-size: 1em;
-    margin-block-end: 8px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    margin-top: 25px;
 }
 
 .button {
@@ -49,13 +47,14 @@ h1 {
     margin-top: 6px;
 }
 
-button {
-    width:100%;
-}
-
 p {
+    color: #69696a;
     border-left: 4px solid #69696a;
     padding-left: 12px;
+}
+
+main {
+    margin-bottom: 80px;
 }
 
 footer {
@@ -66,6 +65,9 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    left:0;
+    box-sizing: border-box;
+    padding-right: 16px;
 }
 
 h3 {
@@ -84,5 +86,66 @@ h3 {
     display: flex;
     flex-direction: row;
     color: #69696a;
-    padding-right: 8px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .header-links {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .header-links li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    main {
+        margin-top: 40px;
+        display: flex;
+    }
+
+    .text {
+        flex: 1;
+    }
+
+    .circle-container {
+        flex: 1;
+    }
+
+    .circle {
+        border-radius: 50%;
+        position: absolute;
+    }
+    
+    #large {
+        background-color: rgba(247, 136, 167, 0.6);
+        height: 250px;
+        width: 250px;
+        right: 100px;
+    }
+    
+    #medium {
+        background-color: rgba(247, 193, 162, 0.7);
+        height: 175px;
+        width: 175px;
+        right: 40px;
+        top: 280px;
+    }
+    
+    #small {
+        background-color: rgba(207, 130, 213, 0.6);
+        height: 125px;
+        width: 125px;
+        right: 20px;
+        top: 200px;
+    }
 }
