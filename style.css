@@ -131,6 +131,10 @@ h3 {
         height: 250px;
         width: 250px;
         right: 100px;
+        animation: fade;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-fill-mode: both;
     }
     
     #medium {
@@ -139,6 +143,10 @@ h3 {
         width: 175px;
         right: 40px;
         top: 280px;
+        animation: fade;
+        animation-duration: 3s;
+        animation-delay: 1.5s;
+        animation-fill-mode: both;
     }
     
     #small {
@@ -147,5 +155,14 @@ h3 {
         width: 125px;
         right: 20px;
         top: 200px;
+        animation: fade;
+        animation-duration: 2.5s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes fade {
+        from {opacity: 0;}
+        to {opacity: 1;}
     }
 }
